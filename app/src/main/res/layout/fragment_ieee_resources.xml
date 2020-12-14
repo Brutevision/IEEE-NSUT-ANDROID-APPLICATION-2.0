@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/card_view_below"
+    tools:context=".fragments.IeeeResourcesFragment">
+    
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        >
+        
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/ieee_resources_collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:contentScrim="?attr/colorPrimary"
+            android:background="@drawable/campus">
+        <ImageView
+            app:layout_collapseMode="parallax"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical" />
+        <androidx.appcompat.widget.Toolbar
+            app:layout_collapseMode="pin"
+            android:id="@+id/resources_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/AppTheme.PopupOverlay"/>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    
+    <androidx.recyclerview.widget.RecyclerView
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:id="@+id/resources_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
