@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">IEEE NSUT</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_about_app">About</string>
+    <string name="error">Please check your internet connection or try again later</string>
+    <string name="title_activity_information_image_slider">InformationImageSliderActivity</string>
+</resources>

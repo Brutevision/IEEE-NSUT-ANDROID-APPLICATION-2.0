@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single">
+
+        <!--<item
+            android:id="@+id/nav_contact"
+            android:title="Account">
+
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/nav_my_profile"
+                        android:icon="@drawable/ic_baseline_person_24"
+                        android:title="My profile" />
+                    //app:showAsAction="never" />
+                    <item
+                        android:id="@+id/nav_search"
+                        android:icon="@drawable/ic_baseline_search_24"
+                        android:title="Find People" />
+                    //app:showAsAction="never" />
+                </group>
+
+            </menu>
+        </item>-->
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="Home"
+            app:showAsAction="collapseActionView" />
+        <item
+            android:id="@+id/nav_events"
+            android:icon="@drawable/ic_baseline_event_24"
+            android:title="Events" />
+        <item
+            android:id="@+id/nav_project"
+            android:icon="@drawable/ic_project_bw"
+            android:title="Projects" />
+        <item
+            android:id="@+id/nav_achievements"
+            android:icon="@drawable/ic_achieve_bw"
+            android:title="Achievements" />
+        <item
+            android:id="@+id/nav_ieee"
+            android:icon="@drawable/ic_ieee_icon"
+            android:title="About IEEE" />
+
+        <item
+            android:id="@+id/nav_resource"
+            android:icon="@drawable/ic_baseline_source_24"
+            android:title="IEEE Resources" />
+
+        <item android:id="@+id/nav_join_ieee"
+            android:checkable="false"
+            android:title="Join IEEE"
+            android:icon="@drawable/ic_join_ieee_24"
+            />
+
+        //MORE ABOUT US
+        <item
+            android:id="@+id/nav_more_about_us"
+            android:title="More about us">
+
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/nav_team"
+                        android:icon="@drawable/ic_baseline_people_24"
+                        android:title="Team" />
+                    //app:showAsAction="never" />
+                    <item
+                        android:id="@+id/nav_developers"
+                        android:icon="@drawable/ic_about_app"
+                        android:title="Developers" />
+                    //app:showAsAction="never" />
+                    <item
+                        android:id="@+id/nav_connect"
+                        android:icon="@drawable/www"
+                        android:title="Connect" />
+                    //app:showAsAction="never" />
+                    <item
+                        android:id="@+id/nav_share"
+                        android:icon="@drawable/ic_baseline_share_24"
+                        android:title="Share" />
+                    //app:showAsAction="never" />
+                </group>
+
+            </menu>
+        </item>
+
+    </group>
+</menu>

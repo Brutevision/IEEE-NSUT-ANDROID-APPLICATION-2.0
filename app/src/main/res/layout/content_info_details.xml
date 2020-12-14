@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fillViewport="true"
+    android:id="@+id/info_details_root_scroll_view"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:paddingLeft="@dimen/text_horizontal_margin"
+        android:paddingRight="@dimen/text_horizontal_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TitleFont"
+            android:layout_marginTop="8dp"
+            android:id="@+id/info_details_title_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Brutevision dsdf"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textIsSelectable="true"/>
+
+        <TextView
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/date_text_view"
+            android:textSize="11sp"
+            android:text="12th Dec, 1920"/>
+
+        <TextView
+            android:id="@+id/info_details_description_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="asdasdsads\nadas"
+            android:textIsSelectable="true"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>
