@@ -1,0 +1,77 @@
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:paddingTop="4dp"
+    android:paddingLeft="@dimen/text_horizontal_margin"
+    android:paddingRight="@dimen/text_horizontal_margin"
+    android:paddingBottom="4dp"
+    android:background="@color/white"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:src="@drawable/ieeensut"
+            android:id="@+id/im_ieee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitStart"
+            android:layout_marginTop="10dp"
+            android:adjustViewBounds="true"/>
+
+        <TextView
+            android:id="@+id/ieee_text_view1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:text="IEEE is the world’s largest professional association advancing innovation and technological excellence for the benefit of humanity. IEEE and its members inspire a global community to innovate for a better tomorrow through its highly-cited publications, conferences, technology standards, and professional and educational activities."
+            android:textAlignment="textStart"
+            android:textColor="@android:color/black"
+            android:textSize="18dp" />
+
+
+        <TextView
+            android:id="@+id/ieee_text_view3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:text="Core purpose of IEEE is to foster technological innovation and excellence for the benefit of humanity.\nand it's vision is to become essential to the technological community that exists throughout the world. They want their members to be the ones to revolutionize technology and improve global conditions. IEEE’s core values include trust, growth and nurturing, global community building, partnership, service to humanity, and integrity in action."
+            android:textAlignment="textStart"
+            android:textColor="@android:color/black"
+            android:textSize="18dp" />
+
+        <TextView
+            android:textColor="@android:color/black"
+            android:id="@+id/ieee_text_view5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:paddingTop="8dp"
+            android:text="The IEEE provides learning opportunities within the engineering sciences, research, and technology.\nIEEE offers educational opportunities such as IEEE e Learning Library, the Education Partners Program, Standards in Education and Continuing Education Units (CEUs)."/>
+
+        <TextView
+            android:textColor="@android:color/black"
+            android:paddingTop="8dp"
+            android:id="@+id/ieee_text_view7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="IEEE offers many student awards, competitions, and other opportunities to get actively involved.\n\n• Competitions\n\n• IEEEXtreme Programming Competition\n\n• IEEEmadC\n\n• Student Branch Awards\n\n• Scholarships, Grants, and Fellowships"/>
+
+        <TextView
+            android:textColor="@android:color/black"
+            android:paddingTop="8dp"
+            android:id="@+id/ieee_text_view9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="• IEEE Life Members Graduate Study Fellowship in Electrical Engineering was established by the IEEE in 2000. The fellowship is awarded annually to a first year, full-time graduate student obtaining their masters for work in the area of electrical engineering, at an engineering school/program of recognized standing worldwide.\n\n• IEEE Charles LeGeyt Fortescue Graduate Scholarship was established by the IRE in 1939 to commemorate Charles Legeyt Fortescue's contributions to electrical engineering. The scholarship is awarded for one year of full-time graduate work obtaining their masters in electrical engineering an ANE engineering school of recognized standing in the United States."/>
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

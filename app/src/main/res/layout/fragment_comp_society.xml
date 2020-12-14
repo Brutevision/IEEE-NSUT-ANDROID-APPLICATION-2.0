@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/text_horizontal_margin"
+    android:paddingRight="@dimen/text_horizontal_margin"
+    android:fillViewport="true"
+    tools:context=".fragments.CompSocietyFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitStart"
+            android:adjustViewBounds="true"
+            android:src="@drawable/compsociety"/>
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:text="Looking for an amalgamation of technology blended with a plethora of innovative ideas; then greetings monsieur your search has ended- this is the IEEE Computer Society. Of the 38 technical societies organized under the IEEE, the Computer Society is the largest and one of the most prominent one. It owes its importance to the scope and purpose of which it came into existence- ‘to advance the theory, practice, and application of computer and information processing science and technology’ and the professional standing of its members. It supports more than 200 chapters worldwide and participates in educational activities at all levels of the profession, including distance learning, accreditation of higher education programs in computer science, and professional certification in software engineering. The society is also a member organization of the Federation of Enterprise Architecture Professional Organizations (FEAPO), a renowned forum to standardize, professionalize, and otherwise advance the discipline of Enterprise Architecture. In 2010 the Computer Society introduced Special Technical Communities (STCs) as a new way for members to develop communities focussing on selected technical areas ,namely broadening participation, cloud computing, education, eGov, haptics, multicore, operating systems, smart grids, social networking, sustainable computing, systems engineering and wearable and ubiquitous technologies"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

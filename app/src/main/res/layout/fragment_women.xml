@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:paddingLeft="@dimen/text_horizontal_margin"
+    android:paddingRight="@dimen/text_horizontal_margin"
+    android:background="@color/white"
+    tools:context=".fragments.WomenFragment">
+    <!--android:background="@drawable/digitalBackground"-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/download" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingBottom="10dp"
+            android:text="IEEE Women in Engineering (WIE) is the largest international professional organization dedicated to promoting women engineers and scientists and inspiring girls around the world to follow their academic interests to a career in engineering. India viewed as a potential powerhouse of innovations, is no exception. The fact, that, institutes of scientific learning are open to all the citizens of a country, but potential females still do not come up and hesitate at the thresholds of laboratories. IEEE has, thus, taken a step forth to help promote all the women across the globe with IEEE Women In Engineering. IEEE WIE NSUT Chapter is a relatively new yet very active WIE chapter.The core team of NSUT IEEE WIE consists of both females and male IEEE members and all the members take genuine interest in working for and developing the section.The name may mislead, but WIE is open to male members as well. Mission and Scope of IEEE WIE : The mission of IEEE WIE is to facilitate the global recruitment and retention of women in technical disciplines. IEEE WIE envisions a vibrant community of IEEE women and men collectively using their diverse talents to innovate for the benefit of humanity. IEEE WIE envisions a vibrant community of IEEE women and men collectively using their diverse talents to innovate for the benefit of humanity."
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18dp" />
+
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

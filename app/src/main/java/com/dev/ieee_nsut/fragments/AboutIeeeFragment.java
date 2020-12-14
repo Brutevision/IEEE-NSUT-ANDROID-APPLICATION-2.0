@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.dev.ieee_nsut.R;
+import com.dev.ieee_nsut.adapter.AboutIeeePagerAdapter;
 import com.google.android.material.tabs.TabLayout;
 
 /**
@@ -48,8 +49,8 @@ public class AboutIeeeFragment extends Fragment {
                 getActivity(), drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-        /*AboutIeeePagerAdapter pagerAdapter = new AboutIeeePagerAdapter(getChildFragmentManager());
-        viewPager.setAdapter(pagerAdapter);*/
+        AboutIeeePagerAdapter pagerAdapter = new AboutIeeePagerAdapter(getChildFragmentManager());
+        viewPager.setAdapter(pagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
     }
 }

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/text_horizontal_margin"
+    android:paddingRight="@dimen/text_horizontal_margin"
+    android:fillViewport="true"
+    android:background="@color/white"
+    tools:context=".fragments.IasChapterFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!--android:background="@drawable/digitalBackground"-->
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitStart"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ieee_ias_logo" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingBottom="10dp"
+            android:text="The Industry Applications Society, as a transnational organization, is interested in advancement of the theory and practice of electrical and electronic engineering in the development, design, manufacture and application of electrical systems, apparatus, devices and controls to the processes and equipment of industry and commerce; promotion of safe, reliable and economic installations; industry leadership in energy conservation and environmental, health, and safety issues; creation of voluntary engineering standards and recommended practices; and the professional development of its membership. If your engineering interests are the needs of the industrial or commercial sector, the Industry Applications Society (IAS) will be a valuable professional connection. One of the largest special interest societies within the Institute of Electrical and Electronics Engineers (IEEE), the IAS focuses specifically on the unique needs of industry and commerce. IAS is a source of professional power to its nearly 10,000 worldwide members. Through a network of over 100 chapters globally, regional events and national and international conferences, the society keeps members abreast of current developments in the area of technology in electricity and electronics. IAS enriches both its individual members and the industry as a whole through the sharing of specific industry-related solutions."
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+        <!--android:background="@drawable/digitalBackground"-->
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

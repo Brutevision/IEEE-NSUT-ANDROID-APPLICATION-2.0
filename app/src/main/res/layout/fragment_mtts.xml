@@ -1,0 +1,40 @@
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:paddingLeft="@dimen/text_horizontal_margin"
+android:paddingRight="@dimen/text_horizontal_margin"
+android:fillViewport="true"
+android:background="@color/white"
+tools:context=".fragments.IasChapterFragment">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <!--android:background="@drawable/digitalBackground"-->
+
+    <ImageView
+        android:id="@+id/mttslogo"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="fitStart"
+        android:adjustViewBounds="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/mttslogo" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:paddingBottom="10dp"
+        android:text="MTT-S is a techincal society comprised of more than 11,000 members worldwide. The core purpose of the socity is to foster the advancement and application of RF and microwave theory and techniques. Members of MTT-S are engaged in research, devices, circuits, components, or systems. weblink: http://www.mtt.org To train a large number of students in the RF area and set up low-cost RF laboratories at various institutes. The initiative for providing 50% subsidised membership for new students joining IEEE MTT-S in 2010 as well as setting up scholarships for students/faculty who present papers at IEEE MTT-S International Microwave Symposium, EuMW, and APMC"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18dp" />
+    <!--android:background="@drawable/digitalBackground"-->
+</LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
