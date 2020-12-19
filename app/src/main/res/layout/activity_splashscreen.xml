@@ -36,6 +36,6 @@
         android:layout_marginStart="40dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView6"
-        app:srcCompat="@drawable/nsutlogo" />
+        app:srcCompat="@drawable/nsut" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
