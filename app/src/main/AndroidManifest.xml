@@ -9,7 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".custom.splashscreen"
+
+        <activity android:name=".ShowFeedImageActivity"
+            android:label="@string/title_activity_show_feed_image"
+            android:theme="@style/BlackStatusBarTheme" >
+        </activity>
+
+        <activity
+            android:name=".custom.splashscreen"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -18,13 +25,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".PastExecommActivity"
-            android:theme="@style/ColoredStatusBarTheme"></activity>
+            android:theme="@style/ColoredStatusBarTheme" />
         <activity
             android:name=".AboutAppActivity"
             android:label="@string/title_activity_about_app"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".InformationImageSliderActivity"
             android:label="@string/title_activity_information_image_slider"
@@ -35,8 +43,6 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-
             </intent-filter>
         </activity>
     </application>
