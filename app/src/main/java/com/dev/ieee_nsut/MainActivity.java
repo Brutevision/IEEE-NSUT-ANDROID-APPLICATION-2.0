@@ -2,6 +2,7 @@ package com.dev.ieee_nsut;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityOptionsCompat;
 import androidx.core.view.GravityCompat;
 import androidx.core.view.ViewCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -33,13 +34,14 @@ import com.dev.ieee_nsut.interfaces.OnHomeFragmentInteractionListener;
 import com.dev.ieee_nsut.interfaces.OnHomeSliderInteractionListener;
 import com.dev.ieee_nsut.interfaces.OnInfoDetailsFragmentInteractionListener;
 import com.dev.ieee_nsut.interfaces.OnInfoFragmentInteractionListener;
+import com.dev.ieee_nsut.models.Feed;
 import com.dev.ieee_nsut.models.Information;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener
         , OnInfoFragmentInteractionListener, OnInfoDetailsFragmentInteractionListener
-        , OnHomeFragmentInteractionListener {
+        , OnHomeFragmentInteractionListener, OnHomeSliderInteractionListener {
     private static final String TAG = "MainActivity";
 
     private static final String HOME_FRAGMENT_TAG = "home_fragment";
@@ -284,5 +286,14 @@ public class MainActivity extends AppCompatActivity
         Intent intent = new Intent(this, InformationImageSliderActivity.class);
         intent.putExtra(ContentUtils.INFO_KEY, information);
         startActivity(intent);
+    }
+
+    @Override
+    public void onHomeSliderInteraction(View view, Feed feed) {
+        Intent intent = new Intent(this, ShowFeedImageActivity.class);
+        ActivityOptionsCompat options = ActivityOptionsCompat.
+                makeSceneTransitionAnimation(this, view, ViewCompat.getTransitionName(view));
+        intent.putExtra(ContentUtils.FEED_KEY, feed);
+        startActivity(intent, options.toBundle());
     }
 }

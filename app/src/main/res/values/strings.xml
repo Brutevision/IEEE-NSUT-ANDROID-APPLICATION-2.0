@@ -8,4 +8,6 @@
     <string name="title_activity_about_app">About</string>
     <string name="error">Please check your internet connection or try again later</string>
     <string name="title_activity_information_image_slider">InformationImageSliderActivity</string>
+    <string name="shared_element_transition">image_view_transition</string>
+    <string name="title_activity_show_feed_image">ShowFeedImageActivity</string>
 </resources>

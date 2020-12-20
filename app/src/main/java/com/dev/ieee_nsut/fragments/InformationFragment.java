@@ -127,7 +127,7 @@ public class InformationFragment extends Fragment implements OnRecyclerViewItemC
 
         switch (mInfoType) {
             case ContentUtils.EVENTS:
-                //appbarImageView.setImageResource(R.drawable.events);
+                appbarImageView.setImageResource(R.drawable.eventbanner);
                 mCollectionReference = FirebaseFirestore.getInstance().collection(ContentUtils.FIRESTORE_EVENTS);
                 break;
             case ContentUtils.ACHIEVEMENTS:

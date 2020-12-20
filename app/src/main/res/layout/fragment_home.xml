@@ -32,6 +32,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="280dp"
                     android:layout_marginTop="8dp" />
+
+                <me.relex.circleindicator.CircleIndicator
+                    android:id="@+id/circle_indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center_horizontal" />
             </LinearLayout>
 
             <androidx.appcompat.widget.Toolbar
