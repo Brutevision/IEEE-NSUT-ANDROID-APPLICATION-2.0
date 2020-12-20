@@ -15,6 +15,8 @@ import com.dev.ieee_nsut.models.Information;
 
 import java.util.ArrayList;
 
+import me.relex.circleindicator.CircleIndicator;
+
 //import me.relex.circleindicator.CircleIndicator;
 
 public class InformationImageSliderActivity extends AppCompatActivity {
@@ -50,11 +52,11 @@ public class InformationImageSliderActivity extends AppCompatActivity {
         }
 
         ViewPager viewPager = findViewById(R.id.image_slider_view_pager);
-        //CircleIndicator circleIndicator = findViewById(R.id.circle_indicator);
+        CircleIndicator circleIndicator = findViewById(R.id.circle_indicator);
         ImageSliderPagerAdapter pagerAdapter = new ImageSliderPagerAdapter(getSupportFragmentManager(), mArrayList);
         viewPager.setAdapter(pagerAdapter);
         viewPager.setPageTransformer(true, new ZoomOutPageTransformer());
-        //circleIndicator.setViewPager(viewPager);
+        circleIndicator.setViewPager(viewPager);
         //.registerDataSetObserver(circleIndicator.getDataSetObserver());
         //ContentUtils.syncIndicatorWithViewPager(viewPager, circleIndicator);
 

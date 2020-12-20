@@ -4,10 +4,15 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.util.DisplayMetrics;
+import android.view.View;
+
+import androidx.viewpager.widget.ViewPager;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+
+import me.relex.circleindicator.CircleIndicator;
 
 
 /**
@@ -104,7 +109,7 @@ public class ContentUtils {
 
     }
     // circleIndicator with view pager
-    /*public static void syncIndicatorWithViewPager(ViewPager viewPager, CircleIndicator circleIndicator){
+    public static void syncIndicatorWithViewPager(ViewPager viewPager, CircleIndicator circleIndicator){
         if(viewPager == null || circleIndicator == null) {
             return;
         }
@@ -113,5 +118,5 @@ public class ContentUtils {
         } else {
             circleIndicator.setVisibility(View.INVISIBLE);
         }
-    }*/
+    }
 }
