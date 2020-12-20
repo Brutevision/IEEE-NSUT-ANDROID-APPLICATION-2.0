@@ -17,8 +17,11 @@ import android.transition.TransitionInflater;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Toast;
 
+import com.dev.ieee_nsut.custom.splashscreen;
 import com.dev.ieee_nsut.fragments.AboutIeeeFragment;
 import com.dev.ieee_nsut.fragments.ExecommFragment;
 import com.dev.ieee_nsut.fragments.HomeFragment;
@@ -56,7 +59,27 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);//title removed by Harsh Sharma :)
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         setContentView(R.layout.activity_main);
+
+//        Thread background = new Thread()
+//        {
+//            public void run()
+//            {
+//                try {
+//                    sleep(5*1000);
+//                    Intent  i = new Intent(MainActivity.this, splashscreen.class );
+//                    startActivity(i);
+//                    finish();
+//                }
+//                catch (Exception e)
+//                {}
+//            }
+//        };
+//        background.start();
 
         mNavigationView = findViewById(R.id.nav_view);
         mNavigationView.setNavigationItemSelectedListener(this);
@@ -115,7 +138,19 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.nav_connect) {
+        if (id== R.id.nav_share)
+        {
+            String appLink = "https://play.google.com/store/apps/details?id=" +
+                    getApplicationContext().getPackageName();
+            String shareAppMsg = "Download IEEE-NSUT Android Application and keep yourself updated " +
+                    "with upcoming events and achievements of IEEE NSUT and much more.\n\n" + appLink;
+            Intent intent = new Intent(Intent.ACTION_SEND);
+            intent.setType("text/plain");
+            intent.putExtra(Intent.EXTRA_TEXT, shareAppMsg);
+            if(intent.resolveActivity(getPackageManager()) != null){
+                startActivity(intent);}
+        }
+        else if (id == R.id.nav_connect) {
             startActivity(new Intent(this, AboutAppActivity.class));
         } else if (id == R.id.nav_join_ieee) {
             Uri uri = Uri.parse(ContentUtils.JOIN_IEEE_URL);
