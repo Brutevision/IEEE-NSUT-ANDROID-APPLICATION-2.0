@@ -24,6 +24,7 @@ import android.widget.Toast;
 
 import com.dev.ieee_nsut.custom.splashscreen;
 import com.dev.ieee_nsut.fragments.AboutIeeeFragment;
+import com.dev.ieee_nsut.fragments.DevelopersFragment;
 import com.dev.ieee_nsut.fragments.ExecommFragment;
 import com.dev.ieee_nsut.fragments.HomeFragment;
 import com.dev.ieee_nsut.fragments.IeeeResourcesFragment;
@@ -53,6 +54,7 @@ public class MainActivity extends AppCompatActivity
     private static final String PROJECTS_FRAGMENT_TAG = "projects_fragment_tag";
     private static final String IEEE_RESOURCES_TAG = "ieee_resources_tag";
     private static final String EXECOMM_FRAGMENT_TAG = "execomm_fragment";
+    private static final String DEVELOPERS_FRAGMENT_TAG = "developers_fragment";
 
     private NavigationView mNavigationView;
 
@@ -109,6 +111,8 @@ public class MainActivity extends AppCompatActivity
 
         ExecommFragment execommFragment = (ExecommFragment) fm.findFragmentByTag(EXECOMM_FRAGMENT_TAG);
 
+        DevelopersFragment developersFragment = (DevelopersFragment) fm.findFragmentByTag(DEVELOPERS_FRAGMENT_TAG);
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
@@ -117,7 +121,8 @@ public class MainActivity extends AppCompatActivity
                 || (eventsFragment != null && eventsFragment.isVisible())
                 || (achievementsFragment != null && achievementsFragment.isVisible())
                 || (projectsFragment != null && projectsFragment.isVisible())
-                || (execommFragment != null && execommFragment.isVisible())) {
+                || (execommFragment != null && execommFragment.isVisible())
+                || (developersFragment != null && developersFragment.isVisible())) {
             ft.setCustomAnimations(R.anim.slide_back_from_left, R.anim.fade_translate_down);
             ft.replace(R.id.main_frame_layout, HomeFragment.newInstance(), HOME_FRAGMENT_TAG).addToBackStack(null).commit();
             mNavigationView.setCheckedItem(R.id.nav_home);
@@ -232,6 +237,14 @@ public class MainActivity extends AppCompatActivity
                     currentFragmentTag = EXECOMM_FRAGMENT_TAG;
                 }
                 break;
+            case R.id.nav_developers:
+                if(!currentFragmentTag.equals(DEVELOPERS_FRAGMENT_TAG)){
+                    ft.setCustomAnimations(R.anim.fade_translate_up,R.anim.slide_to_left);
+                    ft.replace(R.id.main_frame_layout, DevelopersFragment.newInstance(), DEVELOPERS_FRAGMENT_TAG).addToBackStack(null).commit();
+                    ft.addToBackStack(null);
+                    mNavigationView.setCheckedItem(R.id.nav_developers);
+                    currentFragmentTag = DEVELOPERS_FRAGMENT_TAG;
+                }
         }
     }
 
