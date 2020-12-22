@@ -45,6 +45,7 @@ public class ContentUtils {
     public static final String FIRESTORE_PROJECTS = "projects";
     public static final String FIRESTORE_FEEDS = "feeds";
     public static final String FIRESTORE_EXECOMM = "execomm";
+    public static final String FIRESTORE_DEVELOPERS = "developers";
     public static final String FIREBASE_STORAGE_PROFILE_IMAGE = "profile_image";
     public static final  String FIRESTORE_PAST_EXECOMM = "pastExecomm";
     public static final  String FIRESTORE_PAST_EXECOMM_SESSION = "session";

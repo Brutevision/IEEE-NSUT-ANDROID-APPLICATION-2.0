@@ -1,10 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/card_view_below"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.dev.ieee_nsut.fragments.ExecommFragment">
+    android:background="@color/card_view_below"
+    tools:context=".fragments.DevelopersFragment">
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,11 +16,11 @@
             android:layout_height="150dp"
             app:contentScrim="?attr/colorPrimary"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            android:background="@drawable/team">
+            android:background="@color/colorPrimary">
 
             <androidx.appcompat.widget.Toolbar
                 app:layout_collapseMode="pin"
-                android:id="@+id/execomm_toolbar"
+                android:id="@+id/developers_toolbar"
                 app:popupTheme="@style/AppTheme.PopupOverlay"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"/>
@@ -27,6 +28,6 @@
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_execomm_fragment"/>
+    <include layout="@layout/content_developers_fragment"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
