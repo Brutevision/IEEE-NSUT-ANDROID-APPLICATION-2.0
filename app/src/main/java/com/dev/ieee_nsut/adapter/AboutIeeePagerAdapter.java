@@ -11,9 +11,6 @@ import com.dev.ieee_nsut.fragments.IeeeFragment;
 import com.dev.ieee_nsut.fragments.MttsFragment;
 import com.dev.ieee_nsut.fragments.WomenFragment;
 
-/**
- *
- */
 
 public class AboutIeeePagerAdapter extends FragmentPagerAdapter {
 

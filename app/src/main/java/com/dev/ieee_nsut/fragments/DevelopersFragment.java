@@ -22,13 +22,13 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.dev.ieee_nsut.PastExecommActivity;
 import com.dev.ieee_nsut.R;
+import com.dev.ieee_nsut.adapter.DevelopersRecyclerAdapter;
 import com.dev.ieee_nsut.adapter.ExecommRecyclerAdapter;
 import com.dev.ieee_nsut.custom.MyRecyclerDivider;
 import com.dev.ieee_nsut.helpers.ContentUtils;
 import com.dev.ieee_nsut.interfaces.OnExecommItemClickListener;
-import com.dev.ieee_nsut.models.Execomm;
+import com.dev.ieee_nsut.models.Developers;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
@@ -39,93 +39,78 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
-public class ExecommFragment extends Fragment implements OnExecommItemClickListener {
-    private static final String TAG = "ExecommFragment";
-    private CollectionReference execommCollectionReference;
-    private EventListener<QuerySnapshot> eventListener;
-    private ListenerRegistration listenerRegistration;
+public class DevelopersFragment extends Fragment implements OnExecommItemClickListener {
+    private static final String TAG = "DevelopersFragment";
+    private CollectionReference developersCollectionReference;
+    private EventListener<QuerySnapshot> myeventListener;
+    private ListenerRegistration mylistenerRegistration;
 
-    private RecyclerView execommRecyclerView;
-    private ArrayList<Execomm> execommArrayList;
-    private ExecommRecyclerAdapter adapter;
+    private RecyclerView developersRecyclerView;
+    private ArrayList<Developers> developersArrayList;
+    private DevelopersRecyclerAdapter adapter;
     private ProgressBar progressBar;
     private TextView errorTextView;
 
-    private TextView pastTeamTextView;
-
     private CardView cardView;
 
-
-    public ExecommFragment() {
+    public DevelopersFragment() {
         // Required empty public constructor
     }
 
-    public static ExecommFragment newInstance() {
-        return new ExecommFragment();
+    public static DevelopersFragment newInstance() {
+        return new DevelopersFragment();
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_execomm, container, false);
+        return inflater.inflate(R.layout.fragment_developers, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         DrawerLayout drawerLayout = getActivity().findViewById(R.id.drawer_layout);
-        final Toolbar toolbar = view.findViewById(R.id.execomm_toolbar);
-        toolbar.setTitle("Team");
+        final Toolbar toolbar = view.findViewById(R.id.developers_toolbar);
+        toolbar.setTitle("Developers");
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 getActivity(), drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close
         );
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
-        execommCollectionReference = FirebaseFirestore.getInstance().collection(ContentUtils.FIRESTORE_EXECOMM);
+        developersCollectionReference = FirebaseFirestore.getInstance().collection(ContentUtils.FIRESTORE_DEVELOPERS);
 
-        progressBar = view.findViewById(R.id.execomm_progress_bar);
-        errorTextView = view.findViewById(R.id.execomm_error_text_view);
+        progressBar = view.findViewById(R.id.developers_progress_bar);
+        errorTextView = view.findViewById(R.id.developers_error_text_view);
         errorTextView.setVisibility(View.GONE);
-        cardView = view.findViewById(R.id.execomm_card_view);
+        cardView = view.findViewById(R.id.developers_card_view);
         cardView.setVisibility(View.INVISIBLE);
 
-        //pastTeamTextView = view.findViewById(R.id.past_text_view);
-        //pastTeamTextView.setVisibility(View.GONE);
-
-        /*pastTeamTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getActivity(), PastExecommActivity.class));
-            }
-        });*/
-
-        execommArrayList = new ArrayList<>();
+        developersArrayList = new ArrayList<>();
         progressBar.setVisibility(View.VISIBLE);
-        adapter = new ExecommRecyclerAdapter(getActivity(), execommArrayList, this);
-        execommRecyclerView = view.findViewById(R.id.execomm_recycler_view);
-        execommRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
-        execommRecyclerView.addItemDecoration(new MyRecyclerDivider(getActivity(), DividerItemDecoration.VERTICAL));
-        execommRecyclerView.setAdapter(adapter);
-        execommRecyclerView.setNestedScrollingEnabled(false);
+        adapter = new DevelopersRecyclerAdapter(getActivity(), developersArrayList, this);
+        developersRecyclerView = view.findViewById(R.id.developers_recycler_view);
+        developersRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
+        developersRecyclerView.addItemDecoration(new MyRecyclerDivider(getActivity(), DividerItemDecoration.VERTICAL));
+        developersRecyclerView.setAdapter(adapter);
+        developersRecyclerView.setNestedScrollingEnabled(false);
         attachCollectionSnapshotListener();
     }
 
-    private void attachCollectionSnapshotListener(){
-        if(eventListener == null){
-            eventListener = new EventListener<QuerySnapshot>() {
+    private void attachCollectionSnapshotListener() {
+        if (myeventListener == null) {
+            myeventListener = new EventListener<QuerySnapshot>() {
                 @Override
                 public void onEvent(QuerySnapshot documentSnapshots, FirebaseFirestoreException e) {
                     progressBar.setVisibility(View.GONE);
-                    if(e == null){
-                        if(documentSnapshots != null && !documentSnapshots.isEmpty())
-                        {
-                            execommArrayList.clear();
-                            for(DocumentSnapshot documentSnapshot : documentSnapshots)
-                            {
-                                Execomm execomm = documentSnapshot.toObject(Execomm.class);
-                                execommArrayList.add(execomm);
+                    if (e == null) {
+                        if (documentSnapshots != null && !documentSnapshots.isEmpty()) {
+                            developersArrayList.clear();
+                            for (DocumentSnapshot documentSnapshot : documentSnapshots) {
+                                Developers developers = documentSnapshot.toObject(Developers.class);
+                                developersArrayList.add(developers);
                             }
                             cardView.setVisibility(View.VISIBLE);
                             //pastTeamTextView.setVisibility(View.VISIBLE);
@@ -144,22 +129,22 @@ public class ExecommFragment extends Fragment implements OnExecommItemClickListe
                 }
             };
         }
-        listenerRegistration = execommCollectionReference
+        mylistenerRegistration = developersCollectionReference
                 .orderBy("id")
-                .addSnapshotListener(eventListener);
+                .addSnapshotListener(myeventListener);
     }
 
     private void detachCollectionSnapshotListener(){
-        if(listenerRegistration != null){
-            listenerRegistration.remove();
+        if(mylistenerRegistration != null){
+            mylistenerRegistration.remove();
         }
     }
 
     @Override
     public void onPhoneClicked(View view) {
-        int position = execommRecyclerView.getChildAdapterPosition(view);
-        Execomm execomm = execommArrayList.get(position);
-        String phoneNo = execomm.getPhoneNo();
+        int position = developersRecyclerView.getChildAdapterPosition(view);
+        Developers developers = developersArrayList.get(position);
+        String phoneNo = developers.getPhoneNo();
         Intent intent = new Intent(Intent.ACTION_DIAL);
         intent.setData(Uri.parse("tel:"+ phoneNo));
         if(intent.resolveActivity(getActivity().getPackageManager()) != null){
@@ -169,9 +154,9 @@ public class ExecommFragment extends Fragment implements OnExecommItemClickListe
 
     @Override
     public void onEmailClicked(View view) {
-        int position = execommRecyclerView.getChildAdapterPosition(view);
-        Execomm execomm = execommArrayList.get(position);
-        String emailId = execomm.getEmailId();
+        int position = developersRecyclerView.getChildAdapterPosition(view);
+        Developers developers = developersArrayList.get(position);
+        String emailId = developers.getEmailId();
         Intent intent = new Intent(Intent.ACTION_SENDTO);
         intent.setData(Uri.parse("mailto:" + emailId));
         if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
