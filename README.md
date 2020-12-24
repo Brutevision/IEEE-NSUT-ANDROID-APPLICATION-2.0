@@ -2,7 +2,7 @@
 IEEE NSUT Student Branch Android Application.
 
 ## About this app
-<img src = "https://github.com/adiityax/IEEE-NSUT-ANDROID-APPLICATION-2.0/blob/master/app/src/main/res/drawable/logos.png" height="400" width="400" align="middle"/> 
+<img src = "https://github.com/adiityax/IEEE-NSUT-ANDROID-APPLICATION-2.0/blob/master/app/src/main/res/drawable/logos.png" height="400" width="400" align="centre"/> 
 
 Your gateway to IEEE NSUT
 
