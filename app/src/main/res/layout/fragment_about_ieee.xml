@@ -8,14 +8,14 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
-        android:layout_height="224dp"
+        android:layout_height="201dp"
         android:theme="@style/AppTheme.AppBarOverlay"
         app:popupTheme="@style/AppTheme.PopupOverlay">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:id="@+id/about_ieee_collapsing_toolbar"
             android:layout_width="match_parent"
-            android:layout_height="176dp"
+            android:layout_height="150dp"
             android:background="@drawable/whatsapp_image_2020_12_23_at_16_04_06"
             app:contentScrim="?attr/colorPrimary"
             app:layout_scrollFlags="scroll|enterAlways">

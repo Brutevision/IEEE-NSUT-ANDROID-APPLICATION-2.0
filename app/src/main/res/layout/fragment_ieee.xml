@@ -72,6 +72,23 @@
             android:layout_height="wrap_content"
             android:textSize="18dp"
             android:text="• IEEE Life Members Graduate Study Fellowship in Electrical Engineering was established by the IEEE in 2000. The fellowship is awarded annually to a first year, full-time graduate student obtaining their masters for work in the area of electrical engineering, at an engineering school/program of recognized standing worldwide.\n\n• IEEE Charles LeGeyt Fortescue Graduate Scholarship was established by the IRE in 1939 to commemorate Charles Legeyt Fortescue's contributions to electrical engineering. The scholarship is awarded for one year of full-time graduate work obtaining their masters in electrical engineering an ANE engineering school of recognized standing in the United States."/>
+        <TextView
+            android:textColor="@android:color/black"
+            android:paddingTop="8dp"
+            android:id="@+id/ieee_text_view10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="• Started back in 2001, IEEE-DIT has now grown into a multi-faceted chapter, empowering young engineers to enhance their skills and set up milestones in the history of IEEE NSUT. Our foremost objective is to create an environment which promotes students to learn technical knowledge, inculcate managerial skills and develop their overall personalities. We achieve this by sponsoring technical projects, providing opportunities to manage and organize events and to participate in various events and conferences at state as well as national level. IEEE-NSUT Student Branch works to create an atmosphere of technical excellence for the students. It aims at helping students in building an attitude towards applying engineering in daily life by learning ways to use the latest technology on offer.
+.\n\n• Our vision is to:\n
+I. Foster technical initiatives and innovation among students.\n
+II. Add to their qualifications by enabling them to learn new skills.\n
+III. Serve as a forum for collaboration in technical projects.\n
+IV. Equip engineers in the making with the right kind of leadership and interpersonal skills.\n
+V. Define a vision for present and future student members to work forward.
+"/>
+
+
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>
