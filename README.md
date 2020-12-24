@@ -2,7 +2,7 @@
 IEEE NSUT Student Branch Android Application.
 
 ## About this app
-<img src = "https://github.com/adiityax/IEEE-NSUT-ANDROID-APPLICATION-2.0/blob/master/app/src/main/res/drawable/logos.png" height="400" width="400" align="centre"/> 
+<img src = "https://github.com/adiityax/IEEE-NSUT-ANDROID-APPLICATION-2.0/blob/master/app/src/main/res/drawable/logos.png" height="400" width="400"/> 
 
 Your gateway to IEEE NSUT
 
@@ -16,7 +16,7 @@ The IEEE NSUT App gives you access to all the information you may need about IEE
 - IEEE Resources
 - The IEEE team and the Developers team 
 
-![Opening Screen](https://github.com/adiityax/IEEE-NSUT-ANDROID-APPLICATION-2.0/blob/master/app/src/main/res/drawable/Opening%20Screen.jpeg =100x100)
+<img src = "https://github.com/adiityax/IEEE-NSUT-ANDROID-APPLICATION-2.0/blob/master/app/src/main/res/drawable/Opening%20Screen.jpeg" height="100" width="100" />
 ![Home Page](https://github.com/adiityax/IEEE-NSUT-ANDROID-APPLICATION-2.0/blob/master/app/src/main/res/drawable/Home%20Page.jpeg)
 ![Nav Bar](https://github.com/adiityax/IEEE-NSUT-ANDROID-APPLICATION-2.0/blob/master/app/src/main/res/drawable/Home%20Page.jpeg)
 ![About IEEE](https://github.com/adiityax/IEEE-NSUT-ANDROID-APPLICATION-2.0/blob/master/app/src/main/res/drawable/About%20IEEE.jpeg)
