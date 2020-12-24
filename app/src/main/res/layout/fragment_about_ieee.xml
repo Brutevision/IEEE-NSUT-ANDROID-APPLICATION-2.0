@@ -16,7 +16,7 @@
             android:id="@+id/about_ieee_collapsing_toolbar"
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:background="@drawable/whatsapp_image_2020_12_23_at_16_04_06"
+            android:background="@drawable/frontcampus"
             app:contentScrim="?attr/colorPrimary"
             app:layout_scrollFlags="scroll|enterAlways">
 

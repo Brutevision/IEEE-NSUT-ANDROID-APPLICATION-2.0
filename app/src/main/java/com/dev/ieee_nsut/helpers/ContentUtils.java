@@ -24,6 +24,7 @@ public class ContentUtils {
     public static final String EVENTS = "Events";
     public static final String ACHIEVEMENTS = "Achievements";
     public static final String PROJECTS = "Projects";
+    public static final String DIARIES = "Success Diaries";
     public static final String IEEE_RESOURCES = "IEEE Resources";
     public static final String ABOUT_IEEE = "About IEEE";
     public static final String INFO_KEY = "info_key";
@@ -43,6 +44,7 @@ public class ContentUtils {
     public static final String FIRESTORE_EVENTS = "events";
     public static final String FIRESTORE_ACHIEVEMENTS = "achievements";
     public static final String FIRESTORE_PROJECTS = "projects";
+    public static final String FIRESTORE_DIARIES = "diaries";
     public static final String FIRESTORE_FEEDS = "feeds";
     public static final String FIRESTORE_EXECOMM = "execomm";
     public static final String FIRESTORE_DEVELOPERS = "developers";
