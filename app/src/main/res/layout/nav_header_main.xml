@@ -8,12 +8,12 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/navheaderbanner"
+        android:background="@drawable/techback"
         />
 
     <ImageView
-        android:layout_width="90dp"
-        android:layout_height="90dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:src="@drawable/logos"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

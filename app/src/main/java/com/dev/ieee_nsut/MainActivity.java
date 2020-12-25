@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity
 
     private static final String ACHIEVEMENTS_FRAGMENT_TAG = "achieve_fragment_tag";
     private static final String PROJECTS_FRAGMENT_TAG = "projects_fragment_tag";
+    private static final String DIARIES_FRAGMENT_TAG = "diaries_fragment";
     private static final String IEEE_RESOURCES_TAG = "ieee_resources_tag";
     private static final String EXECOMM_FRAGMENT_TAG = "execomm_fragment";
     private static final String DEVELOPERS_FRAGMENT_TAG = "developers_fragment";
@@ -108,6 +109,7 @@ public class MainActivity extends AppCompatActivity
         InformationFragment eventsFragment = (InformationFragment) fm.findFragmentByTag(EVENTS_FRAGMENT_TAG);
         InformationFragment achievementsFragment = (InformationFragment) fm.findFragmentByTag(ACHIEVEMENTS_FRAGMENT_TAG);
         InformationFragment projectsFragment = (InformationFragment) fm.findFragmentByTag(PROJECTS_FRAGMENT_TAG);
+        InformationFragment diariesFragment = (InformationFragment) fm.findFragmentByTag(DIARIES_FRAGMENT_TAG);
 
         ExecommFragment execommFragment = (ExecommFragment) fm.findFragmentByTag(EXECOMM_FRAGMENT_TAG);
 
@@ -121,6 +123,7 @@ public class MainActivity extends AppCompatActivity
                 || (eventsFragment != null && eventsFragment.isVisible())
                 || (achievementsFragment != null && achievementsFragment.isVisible())
                 || (projectsFragment != null && projectsFragment.isVisible())
+                || (diariesFragment != null && diariesFragment.isVisible())
                 || (execommFragment != null && execommFragment.isVisible())
                 || (developersFragment != null && developersFragment.isVisible())) {
             ft.setCustomAnimations(R.anim.slide_back_from_left, R.anim.fade_translate_down);
@@ -228,6 +231,14 @@ public class MainActivity extends AppCompatActivity
                     currentFragmentTag = PROJECTS_FRAGMENT_TAG;
                 }
                 break;
+            case R.id.nav_diaries:
+                if (!currentFragmentTag.equals(DIARIES_FRAGMENT_TAG)) {
+                    ft.setCustomAnimations(R.anim.fade_translate_up, R.anim.slide_to_left);
+                    ft.replace(R.id.main_frame_layout, InformationFragment.newInstance(ContentUtils.DIARIES), DIARIES_FRAGMENT_TAG).addToBackStack(null).commit();
+                    mNavigationView.setCheckedItem(R.id.nav_diaries);
+                    currentFragmentTag = PROJECTS_FRAGMENT_TAG;
+                }
+                break;
             case R.id.nav_team:
                 if(!currentFragmentTag.equals(EXECOMM_FRAGMENT_TAG)){
                     ft.setCustomAnimations(R.anim.fade_translate_up,R.anim.slide_to_left);
@@ -259,6 +270,9 @@ public class MainActivity extends AppCompatActivity
                 break;
             case ContentUtils.ACHIEVEMENTS:
                 displaySelectedFragment(R.id.nav_achievements);
+                break;
+            case ContentUtils.DIARIES:
+                displaySelectedFragment(R.id.nav_diaries);
                 break;
             case ContentUtils.ABOUT_IEEE:
                 displaySelectedFragment(R.id.nav_ieee);

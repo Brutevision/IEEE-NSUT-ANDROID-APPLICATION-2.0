@@ -140,6 +140,7 @@ public class HomeFragment extends Fragment implements OnRecyclerViewItemClickLis
         mHomeItemsArrayList.add(new HomeItems(ContentUtils.EVENTS, R.drawable.ic_events, R.color.xplore_color));
         mHomeItemsArrayList.add(new HomeItems(ContentUtils.PROJECTS, R.drawable.ic_project,R.color.colorRed));
         mHomeItemsArrayList.add(new HomeItems(ContentUtils.ACHIEVEMENTS, R.drawable.ic_achieve, R.color.colorRed));
+        mHomeItemsArrayList.add(new HomeItems(ContentUtils.DIARIES, R.drawable.goalhome, R.color.xplore_color));
         mHomeItemsArrayList.add(new HomeItems(ContentUtils.ABOUT_IEEE, R.drawable.ic_ieeenew1, R.color.colorRed));
         mHomeItemsArrayList.add(new HomeItems(ContentUtils.IEEE_RESOURCES, R.drawable.ic_resources, R.color.colorAccent));
         HomeItemsAdapter mHomeItemsAdapter = new HomeItemsAdapter(getActivity(), mHomeItemsArrayList, this);

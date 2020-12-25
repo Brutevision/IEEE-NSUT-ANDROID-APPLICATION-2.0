@@ -56,7 +56,7 @@ public class InformationImageSliderActivity extends AppCompatActivity {
         ImageSliderPagerAdapter pagerAdapter = new ImageSliderPagerAdapter(getSupportFragmentManager(), mArrayList);
         viewPager.setAdapter(pagerAdapter);
         viewPager.setPageTransformer(true, new ZoomOutPageTransformer());
-        circleIndicator.setViewPager(viewPager);
+        //circleIndicator.setViewPager(viewPager);
         //.registerDataSetObserver(circleIndicator.getDataSetObserver());
         //ContentUtils.syncIndicatorWithViewPager(viewPager, circleIndicator);
 
