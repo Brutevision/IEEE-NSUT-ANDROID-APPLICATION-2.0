@@ -286,6 +286,9 @@ public class MainActivity extends AppCompatActivity
             case ContentUtils.ABOUT_IEEE:
                 displaySelectedFragment(R.id.nav_ieee);
                 break;
+            case ContentUtils.SMP:
+                displaySelectedFragment(R.id.nav_smp);
+                break;
             case ContentUtils.IEEE_RESOURCES:
                 displaySelectedFragment(R.id.nav_resource);
                 break;
