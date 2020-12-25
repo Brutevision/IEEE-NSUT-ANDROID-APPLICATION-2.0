@@ -245,7 +245,7 @@ public class MainActivity extends AppCompatActivity
                     ft.setCustomAnimations(R.anim.fade_translate_up, R.anim.slide_to_left);
                     ft.replace(R.id.main_frame_layout, InformationFragment.newInstance(ContentUtils.SMP),SMP_FRAGMENT_TAG).addToBackStack(null).commit();
                     mNavigationView.setCheckedItem(R.id.nav_smp);
-                    currentFragmentTag = PROJECTS_FRAGMENT_TAG;
+                    currentFragmentTag = SMP_FRAGMENT_TAG;
                 }
                 break;
             case R.id.nav_team:
