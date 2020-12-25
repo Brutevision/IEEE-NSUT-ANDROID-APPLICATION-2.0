@@ -47,6 +47,10 @@
             android:icon="@drawable/target"
             android:title="Success diaries" />
         <item
+            android:id="@+id/nav_smp"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="SMP" />
+        <item
             android:id="@+id/nav_ieee"
             android:icon="@drawable/ic_ieee_icon"
             android:title="About IEEE" />

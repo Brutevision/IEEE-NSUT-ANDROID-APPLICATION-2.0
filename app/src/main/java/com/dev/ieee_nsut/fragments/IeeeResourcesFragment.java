@@ -48,7 +48,7 @@ public class IeeeResourcesFragment extends Fragment implements OnRecyclerViewIte
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState){
         super.onViewCreated(view, savedInstanceState);
 
-        Toolbar toolbar = view.findViewById(R.id.resources_toolbar);
+        Toolbar toolbar = view.findViewById(R.id.SMP_toolbar);
         CollapsingToolbarLayout toolbarLayout = view.findViewById(R.id.ieee_resources_collapsing_toolbar);
         toolbar.setTitle("IEEE Resources");
 

@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity
     private static final String ACHIEVEMENTS_FRAGMENT_TAG = "achieve_fragment_tag";
     private static final String PROJECTS_FRAGMENT_TAG = "projects_fragment_tag";
     private static final String DIARIES_FRAGMENT_TAG = "diaries_fragment";
+    private static final String SMP_FRAGMENT_TAG = "SMPFragment";
     private static final String IEEE_RESOURCES_TAG = "ieee_resources_tag";
     private static final String EXECOMM_FRAGMENT_TAG = "execomm_fragment";
     private static final String DEVELOPERS_FRAGMENT_TAG = "developers_fragment";
@@ -236,6 +237,14 @@ public class MainActivity extends AppCompatActivity
                     ft.setCustomAnimations(R.anim.fade_translate_up, R.anim.slide_to_left);
                     ft.replace(R.id.main_frame_layout, InformationFragment.newInstance(ContentUtils.DIARIES), DIARIES_FRAGMENT_TAG).addToBackStack(null).commit();
                     mNavigationView.setCheckedItem(R.id.nav_diaries);
+                    currentFragmentTag = PROJECTS_FRAGMENT_TAG;
+                }
+                break;
+            case R.id.nav_smp:
+                if (!currentFragmentTag.equals(SMP_FRAGMENT_TAG)) {
+                    ft.setCustomAnimations(R.anim.fade_translate_up, R.anim.slide_to_left);
+                    ft.replace(R.id.main_frame_layout, InformationFragment.newInstance(ContentUtils.SMP),SMP_FRAGMENT_TAG).addToBackStack(null).commit();
+                    mNavigationView.setCheckedItem(R.id.nav_smp);
                     currentFragmentTag = PROJECTS_FRAGMENT_TAG;
                 }
                 break;
