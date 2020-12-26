@@ -135,11 +135,11 @@ public class InformationFragment extends Fragment implements OnRecyclerViewItemC
                 mCollectionReference = FirebaseFirestore.getInstance().collection(ContentUtils.FIRESTORE_ACHIEVEMENTS);
                 break;
             case ContentUtils.PROJECTS:
-                //appbarImageView.setImageResource(R.drawable.events);
+                appbarImageView.setImageResource(R.drawable.mentorship);
                 mCollectionReference = FirebaseFirestore.getInstance().collection(ContentUtils.FIRESTORE_PROJECTS);
                 break;
             case ContentUtils.DIARIES:
-                //appbarImageView.setImageResource(R.drawable.events);
+                appbarImageView.setImageResource(R.drawable.whatsapp_image_2020_12_22_at_00_34_49__1_);
                 mCollectionReference = FirebaseFirestore.getInstance().collection(ContentUtils.FIRESTORE_DIARIES);
                 break;
         }
