@@ -30,6 +30,7 @@ import com.dev.ieee_nsut.fragments.HomeFragment;
 import com.dev.ieee_nsut.fragments.IeeeResourcesFragment;
 import com.dev.ieee_nsut.fragments.InformationDetailsFragment;
 import com.dev.ieee_nsut.fragments.InformationFragment;
+import com.dev.ieee_nsut.fragments.SMPFragment;
 import com.dev.ieee_nsut.helpers.ContentUtils;
 import com.dev.ieee_nsut.interfaces.OnHomeFragmentInteractionListener;
 import com.dev.ieee_nsut.interfaces.OnHomeSliderInteractionListener;
@@ -53,6 +54,7 @@ public class MainActivity extends AppCompatActivity
     private static final String ACHIEVEMENTS_FRAGMENT_TAG = "achieve_fragment_tag";
     private static final String PROJECTS_FRAGMENT_TAG = "projects_fragment_tag";
     private static final String DIARIES_FRAGMENT_TAG = "diaries_fragment";
+    private static final String SMP_FRAGMENT_TAG = "s_m_p_Fragment";
     private static final String IEEE_RESOURCES_TAG = "ieee_resources_tag";
     private static final String EXECOMM_FRAGMENT_TAG = "execomm_fragment";
     private static final String DEVELOPERS_FRAGMENT_TAG = "developers_fragment";
@@ -239,6 +241,14 @@ public class MainActivity extends AppCompatActivity
                     currentFragmentTag = PROJECTS_FRAGMENT_TAG;
                 }
                 break;
+            case R.id.nav_smp:
+                if (!currentFragmentTag.equals(SMP_FRAGMENT_TAG)) {
+                    ft.setCustomAnimations(R.anim.fade_translate_up, R.anim.slide_to_left);
+                    ft.replace(R.id.main_frame_layout, new SMPFragment(), SMP_FRAGMENT_TAG).addToBackStack(null).commit();
+                    mNavigationView.setCheckedItem(R.id.nav_smp);
+                    currentFragmentTag = SMP_FRAGMENT_TAG;
+                }
+                break;
             case R.id.nav_team:
                 if(!currentFragmentTag.equals(EXECOMM_FRAGMENT_TAG)){
                     ft.setCustomAnimations(R.anim.fade_translate_up,R.anim.slide_to_left);
@@ -276,6 +286,9 @@ public class MainActivity extends AppCompatActivity
                 break;
             case ContentUtils.ABOUT_IEEE:
                 displaySelectedFragment(R.id.nav_ieee);
+                break;
+            case ContentUtils.SMP:
+                displaySelectedFragment(R.id.nav_smp);
                 break;
             case ContentUtils.IEEE_RESOURCES:
                 displaySelectedFragment(R.id.nav_resource);

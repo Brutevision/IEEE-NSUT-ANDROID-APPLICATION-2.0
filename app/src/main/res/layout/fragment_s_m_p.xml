@@ -10,27 +10,43 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:theme="@style/AppTheme.AppBarOverlay"
-        >
+        android:theme="@style/AppTheme.AppBarOverlay">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:id="@+id/ieee_resources_collapsing_toolbar"
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            app:contentScrim="?attr/colorPrimary">
-            <ImageView
-                app:layout_collapseMode="parallax"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical" />
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
             <androidx.appcompat.widget.Toolbar
-                app:layout_collapseMode="pin"
-                android:id="@+id/resources_toolbar"
+                android:id="@+id/SMP_toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:popupTheme="@style/AppTheme.PopupOverlay"/>
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/how_important_are_projects_for_engineering_students_though_education_is_supposed_to_be_an_evenly_balanced_process_of_theory_and_application_the_college_exams_often_test_just_the_theory_part_most_of_the_marks_that_we_get_are_for_what_we_write_from_our_memory_yes_there_are_those_numerous_equations_and_problems_to_be_solved_but_most_of_that_is_solved_using_the_pen_and_paper_the_real_world_demands_more_than_that_the_bridge_between_the_theoretical_aspects_and_real_world_is_project_based_learning_however_in_engineering_curriculum_projects_are_for_the_final_year_students_and_this_lack_of_application_of_knowledge_in_the_real_world_throughout_the_course_of_study_is_what_hinders_us_from_truly_appreciating_the_things_that_we_study_this_is_where_projects_for_a_few_of_the_subjects_that_have_to_be_studied_in_a_particular_semester_comes_into_the_picture_projects_help_us_in_understanding_the_subject_better_which_in_turn_leads_to_remembering_what_we_have_studied_for_a_longer_duration_of_time_do_you_remember_all_that_stuff_that_you_read_for_the_exam_you_wrote_a_few_months_ago_probably_not_but_you_will_definitely_remember_a_lot_of_things_if_you_have_done_a_project_on_the_subject_projects_encourage_us_to_dig_deeper_help_us_learn_new_things_projects_make_learning_more_learner_driven_than_teacher_driven_small_opportunities_are_often_the_beginning_of_great_enterprises_ieee_nsut_provides_a_unique_opportunity_to_select_few_groups_or_individuals_to_develop_their_projects_under_the_guidance_of_ieee_nsut_each_interested_fresher_will_be_assigned_a_senior_student_as_a_student_mentor_who_will_be_responsible_for_guiding_the_student_regarding_issues_like_academics_extracurricular_hostel_etc_the_mentorship_program_accelerates_the_project_completion_and_ensures_that_all_hurdles_are_properly_dealt_with_proper_technical_guidance_the_two_month_program_would_consist_of_mentoring_training_efficient_project_development_and_management_projects_shortlisted_this_year_to_find_out_more_about_projects_from_seniors_head_on_over_to_our_success_diary_page"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:visibility="visible" />
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

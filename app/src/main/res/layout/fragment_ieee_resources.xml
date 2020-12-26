@@ -27,7 +27,7 @@
             android:layout_gravity="center_vertical" />
         <androidx.appcompat.widget.Toolbar
             app:layout_collapseMode="pin"
-            android:id="@+id/resources_toolbar"
+            android:id="@+id/SMP_toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:popupTheme="@style/AppTheme.PopupOverlay"/>
