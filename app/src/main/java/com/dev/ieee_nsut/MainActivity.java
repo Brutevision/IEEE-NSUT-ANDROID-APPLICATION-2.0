@@ -66,28 +66,11 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);//title removed by Harsh Sharma :)
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
+//        requestWindowFeature(Window.FEATURE_NO_TITLE);//title removed by Harsh Sharma :)
+//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+//                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+//
         setContentView(R.layout.activity_main);
-
-//        Thread background = new Thread()
-//        {
-//            public void run()
-//            {
-//                try {
-//                    sleep(5*1000);
-//                    Intent  i = new Intent(MainActivity.this, splashscreen.class );
-//                    startActivity(i);
-//                    finish();
-//                }
-//                catch (Exception e)
-//                {}
-//            }
-//        };
-//        background.start();
-
         mNavigationView = findViewById(R.id.nav_view);
         mNavigationView.setNavigationItemSelectedListener(this);
         // First display HomeFragment
