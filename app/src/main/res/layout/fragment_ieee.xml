@@ -17,7 +17,7 @@
         android:orientation="vertical">
 
         <ImageView
-            android:src="@drawable/ieeensut"
+            android:src="@drawable/_8857_22"
             android:id="@+id/im_ieee"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
