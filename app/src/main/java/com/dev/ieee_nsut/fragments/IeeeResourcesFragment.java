@@ -61,6 +61,9 @@ public class IeeeResourcesFragment extends Fragment implements OnRecyclerViewIte
         mRecyclerView = view.findViewById(R.id.resources_recycler_view);
         mArrayList = new ArrayList<>();
 
+        mArrayList.add(new Resources("Uncover IEEE member benefits that are most relevant to you. Use the Global Benefits finder below to select your current career phase and country, then select \"Go.\" Your results page will render a list of key IEEE member benefits that can help you accelerate your career plans and help you grow as a technology professional.\n" +
+                "Accelerate your plans.  As a member, you'll be presented with new resources, valuable opportunities and many discounts that will help you advance your career in the right direction."
+                , R.drawable.whatsapp_image_2020_12_28_at_02_32_14, "https://www.ieee.org/membership/benefits/index.html?byCareerPhase=Undergraduate+Student&byCountry=IN&fbclid=IwAR3SztRNiz0QZhQ2ucxSpEd1yvN325TWo4UCSLI8XEQon7MbJR1PiK14Yn4", R.color.dark_blue));
         mArrayList.add(new Resources("IEEE Spectrum is the flagship magazine and website of the IEEE, the world’s largest professional organization devoted to engineering and the applied sciences. Our charter is to keep over 400,000 members informed about major trends and developments in technology, engineering, and science."
                 , R.drawable.ieee_spectrum, "https://spectrum.ieee.org/", R.color.dark_blue));
         mArrayList.add(new Resources("IEEE Collabratec™ is an integrated online community where technology professionals can network, collaborate, and create — all in one central hub."
