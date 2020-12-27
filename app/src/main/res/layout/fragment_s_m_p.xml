@@ -36,19 +36,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:fontFamily="sans-serif-smallcaps"
-                android:text="How important are projects for engineering students? \n  Though education is supposed to be an evenly balanced process of theory and application, the college exams often test just the theory part. Most of the marks that we get are for what we write from our memory. Yes, there are those numerous equations and problems to be solved. But most of that is solved using the pen and paper. The real world demands more than that. \n The bridge between the theoretical aspects and real world is project based learning. However, in engineering curriculum, projects are for the final year students. And this lack of application of knowledge in the real world throughout the course of study is what hinders us from truly appreciating the things that we study. \n This is where projects for a few of the subjects that have to be studied in a particular semester comes into the picture. Projects help us in understanding the subject better which in turn leads to remembering what we have studied for a longer duration of time. Do you remember all that stuff that you read for the exam you wrote a few months ago? Probably not. But you will definitely remember a lot of things if you have done a project on the subject. Projects encourage us to dig deeper & help us learn new things. Projects make learning more learner driven than teacher driven.  \n  'Small opportunities are often the beginning of great enterprises'  \n  IEEE-NSUT provides a unique opportunity to select few groups or individuals to develop their projects under the guidance of IEEE-NSUT. Each interested fresher will be assigned a senior student as a student mentor who will be responsible for guiding the student regarding issues like academics, extracurricular, hostel etc. The mentorship program accelerates the project completion and ensures that all hurdles are properly dealt with proper technical guidance. The two month program would consist of mentoring, training, efficient project development and management.  \n "
-                android:textAlignment="center"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:visibility="visible" />
-        </LinearLayout>
+            android:orientation="vertical"/>
     </ScrollView>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
