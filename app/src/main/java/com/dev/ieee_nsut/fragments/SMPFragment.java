@@ -34,7 +34,7 @@ public class SMPFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         Toolbar toolbar = view.findViewById(R.id.SMP_toolbar);
-        toolbar.setTitle("SMP");
+        toolbar.setTitle("Student Mentorship Program");
         ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
 
         DrawerLayout drawer = getActivity().findViewById(R.id.drawer_layout);
