@@ -25,6 +25,7 @@ public class ContentUtils {
     public static final String ACHIEVEMENTS = "Achievements";
     public static final String PROJECTS = "Projects";
     public static final String DIARIES = "Success Diaries";
+    public static final String SMP = "SMP";
     public static final String IEEE_RESOURCES = "IEEE Resources";
     public static final String ABOUT_IEEE = "About IEEE";
     public static final String INFO_KEY = "info_key";

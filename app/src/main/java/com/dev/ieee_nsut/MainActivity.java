@@ -2,6 +2,7 @@ package com.dev.ieee_nsut;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.app.ActivityOptionsCompat;
 import androidx.core.view.GravityCompat;
 import androidx.core.view.ViewCompat;
@@ -10,6 +11,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
@@ -20,6 +22,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.dev.ieee_nsut.custom.splashscreen;
@@ -30,6 +33,7 @@ import com.dev.ieee_nsut.fragments.HomeFragment;
 import com.dev.ieee_nsut.fragments.IeeeResourcesFragment;
 import com.dev.ieee_nsut.fragments.InformationDetailsFragment;
 import com.dev.ieee_nsut.fragments.InformationFragment;
+//import com.dev.ieee_nsut.fragments.SMPFragment;
 import com.dev.ieee_nsut.helpers.ContentUtils;
 import com.dev.ieee_nsut.interfaces.OnHomeFragmentInteractionListener;
 import com.dev.ieee_nsut.interfaces.OnHomeSliderInteractionListener;
@@ -53,39 +57,23 @@ public class MainActivity extends AppCompatActivity
     private static final String ACHIEVEMENTS_FRAGMENT_TAG = "achieve_fragment_tag";
     private static final String PROJECTS_FRAGMENT_TAG = "projects_fragment_tag";
     private static final String DIARIES_FRAGMENT_TAG = "diaries_fragment";
+//    private static final String SMP_FRAGMENT_TAG = "s_m_p_Fragment";
     private static final String IEEE_RESOURCES_TAG = "ieee_resources_tag";
     private static final String EXECOMM_FRAGMENT_TAG = "execomm_fragment";
     private static final String DEVELOPERS_FRAGMENT_TAG = "developers_fragment";
 
     private NavigationView mNavigationView;
-
+//    private Button btnToggleDark;
     private String currentFragmentTag = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);//title removed by Harsh Sharma :)
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
+//        requestWindowFeature(Window.FEATURE_NO_TITLE);//title removed by Harsh Sharma :)
+//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+//                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+//
         setContentView(R.layout.activity_main);
-
-//        Thread background = new Thread()
-//        {
-//            public void run()
-//            {
-//                try {
-//                    sleep(5*1000);
-//                    Intent  i = new Intent(MainActivity.this, splashscreen.class );
-//                    startActivity(i);
-//                    finish();
-//                }
-//                catch (Exception e)
-//                {}
-//            }
-//        };
-//        background.start();
-
         mNavigationView = findViewById(R.id.nav_view);
         mNavigationView.setNavigationItemSelectedListener(this);
         // First display HomeFragment
@@ -93,6 +81,88 @@ public class MainActivity extends AppCompatActivity
             displaySelectedFragment(R.id.nav_home);
             mNavigationView.setCheckedItem(R.id.nav_home);
         }
+
+//        btnToggleDark = findViewById(R.id.btnToggleDark);
+//
+//        // Saving state of our app
+//        // using SharedPreferences
+//        SharedPreferences sharedPreferences
+//                = getSharedPreferences(
+//                "sharedPrefs", MODE_PRIVATE);
+//        final SharedPreferences.Editor editor
+//                = sharedPreferences.edit();
+//        final boolean isDarkModeOn
+//                = sharedPreferences
+//                .getBoolean(
+//                        "isDarkModeOn", false);
+//
+//        // When user reopens the app
+//        // after applying dark/light mode
+//        if (isDarkModeOn) {
+//            AppCompatDelegate
+//                    .setDefaultNightMode(
+//                            AppCompatDelegate
+//                                    .MODE_NIGHT_YES);
+//            btnToggleDark.setText(
+//                    "Disable Dark Mode");
+//        }
+//        else {
+//            AppCompatDelegate
+//                    .setDefaultNightMode(
+//                            AppCompatDelegate
+//                                    .MODE_NIGHT_NO);
+//            btnToggleDark
+//                    .setText(
+//                            "Enable Dark Mode");
+//        }
+//
+//        btnToggleDark.setOnClickListener(
+//                new View.OnClickListener() {
+//
+//                    @Override
+//                    public void onClick(View view)
+//                    {
+//                        // When user taps the enable/disable
+//                        // dark mode button
+//                        if (isDarkModeOn) {
+//
+//                            // if dark mode is on it
+//                            // will turn it off
+//                            AppCompatDelegate
+//                                    .setDefaultNightMode(
+//                                            AppCompatDelegate
+//                                                    .MODE_NIGHT_NO);
+//                            // it will set isDarkModeOn
+//                            // boolean to false
+//                            editor.putBoolean(
+//                                    "isDarkModeOn", false);
+//                            editor.apply();
+//
+//                            // change text of Button
+//                            btnToggleDark.setText(
+//                                    "Enable Dark Mode");
+//                        }
+//                        else {
+//
+//                            // if dark mode is off
+//                            // it will turn it on
+//                            AppCompatDelegate
+//                                    .setDefaultNightMode(
+//                                            AppCompatDelegate
+//                                                    .MODE_NIGHT_YES);
+//
+//                            // it will set isDarkModeOn
+//                            // boolean to true
+//                            editor.putBoolean(
+//                                    "isDarkModeOn", true);
+//                            editor.apply();
+//
+//                            // change text of Button
+//                            btnToggleDark.setText(
+//                                    "Disable Dark Mode");
+//                        }
+//                    }
+//                });
     }
 
     //When pressed back activity should jump to HomeFragment
@@ -239,6 +309,14 @@ public class MainActivity extends AppCompatActivity
                     currentFragmentTag = PROJECTS_FRAGMENT_TAG;
                 }
                 break;
+//            case R.id.nav_smp:
+//                if (!currentFragmentTag.equals(SMP_FRAGMENT_TAG)) {
+//                    ft.setCustomAnimations(R.anim.fade_translate_up, R.anim.slide_to_left);
+//                    ft.replace(R.id.main_frame_layout, new SMPFragment(), SMP_FRAGMENT_TAG).addToBackStack(null).commit();
+//                    mNavigationView.setCheckedItem(R.id.nav_smp);
+//                    currentFragmentTag = SMP_FRAGMENT_TAG;
+//                }
+//                break;
             case R.id.nav_team:
                 if(!currentFragmentTag.equals(EXECOMM_FRAGMENT_TAG)){
                     ft.setCustomAnimations(R.anim.fade_translate_up,R.anim.slide_to_left);
@@ -277,6 +355,9 @@ public class MainActivity extends AppCompatActivity
             case ContentUtils.ABOUT_IEEE:
                 displaySelectedFragment(R.id.nav_ieee);
                 break;
+//            case ContentUtils.SMP:
+//                displaySelectedFragment(R.id.nav_smp);
+//                break;
             case ContentUtils.IEEE_RESOURCES:
                 displaySelectedFragment(R.id.nav_resource);
                 break;
