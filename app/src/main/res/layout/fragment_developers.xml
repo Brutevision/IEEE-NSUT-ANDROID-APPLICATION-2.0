@@ -28,6 +28,6 @@
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_developers_fragment"/>
+    <include layout="@layout/content_developers_fragment" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

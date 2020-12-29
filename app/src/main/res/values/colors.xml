@@ -19,4 +19,7 @@
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
     <color name="dark_blue">#02138C</color>
+
+    <color name="textColor">#000000</color>
+    <color name="backgroundColorr">#FCFCFC</color>
 </resources>
