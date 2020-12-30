@@ -48,7 +48,7 @@ public class IeeeResourcesFragment extends Fragment implements OnRecyclerViewIte
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState){
         super.onViewCreated(view, savedInstanceState);
 
-        Toolbar toolbar = view.findViewById(R.id.SMP_toolbar);
+        Toolbar toolbar = view.findViewById(R.id.resources_toolbar);
         CollapsingToolbarLayout toolbarLayout = view.findViewById(R.id.ieee_resources_collapsing_toolbar);
         toolbar.setTitle("IEEE Resources");
 
@@ -61,20 +61,20 @@ public class IeeeResourcesFragment extends Fragment implements OnRecyclerViewIte
         mRecyclerView = view.findViewById(R.id.resources_recycler_view);
         mArrayList = new ArrayList<>();
 
-        mArrayList.add(new Resources("Uncover IEEE member benefits that are most relevant to you. Use the Global Benefits finder below to select your current career phase and country, then select \"Go.\" Your results page will render a list of key IEEE member benefits that can help you accelerate your career plans and help you grow as a technology professional.\n" +
-                "Accelerate your plans.  As a member, you'll be presented with new resources, valuable opportunities and many discounts that will help you advance your career in the right direction."
-                , R.drawable.whatsapp_image_2020_12_28_at_02_32_14, "https://www.ieee.org/membership/benefits/index.html?byCareerPhase=Undergraduate+Student&byCountry=IN&fbclid=IwAR3SztRNiz0QZhQ2ucxSpEd1yvN325TWo4UCSLI8XEQon7MbJR1PiK14Yn4", R.color.dark_blue));
+        mArrayList.add(new Resources("Uncover IEEE member benefits that are most relevant to you. Use the Global Benefits finder below to select your current career phase and country, then select \"Go.\" Your results page will render a list of key IEEE member benefits that can help you accelerate your career plans and help you grow as a technology professional."
+                , R.drawable.benefits, "https://www.ieee.org/membership/benefits/index.html?byCareerPhase=Undergraduate+Student&byCountry=IN&fbclid=IwAR3SztRNiz0QZhQ2ucxSpEd1yvN325TWo4UCSLI8XEQon7MbJR1PiK14Yn4", R.color.benefits));
         mArrayList.add(new Resources("IEEE Spectrum is the flagship magazine and website of the IEEE, the world’s largest professional organization devoted to engineering and the applied sciences. Our charter is to keep over 400,000 members informed about major trends and developments in technology, engineering, and science."
                 , R.drawable.ieee_spectrum, "https://spectrum.ieee.org/", R.color.dark_blue));
+        mArrayList.add(new Resources("IEEE Access is a multidisciplinary, open access journal of the IEEE.\n" +
+                "Continuously presenting the results of original research or development across all of IEEE’s fields of interest, IEEE Access provides authors a high-quality open access journal with a rapid yet rigorous peer review process of 4 to 6 weeks."
+                ,R.drawable.ieee_access,"https://ieeeaccess.ieee.org/",
+                R.color.resume_lab_color));
         mArrayList.add(new Resources("IEEE Collabratec™ is an integrated online community where technology professionals can network, collaborate, and create — all in one central hub."
                 ,R.drawable.ieee_collabratec,"https://ieee-collabratec.ieee.org/", R.color.collabratec_color));
         mArrayList.add(new Resources("IEEE Xplore® Digital Library is a powerful resource for discovery of and access to scientific and technical content published by the IEEE (Institute of Electrical and Electronics Engineers) and its publishing partners."
                 ,R.drawable.ieee_xplore,"http://ieeexplore.ieee.org/Xplore/home.jsp", R.color.xplore_color));
         mArrayList.add(new Resources("IEEE Transmitter™, in this you will find a collection of articles, videos, infographics, inspiration and more all curated by IEEE."
                 ,R.drawable.ieee_transmitter,"https://transmitter.ieee.org/", R.color.transmitter_color));
-        mArrayList.add(new Resources("IEEE ResumeLab is an online service that allows IEEE members to develop a resume or curriculum vitae using a wide array of resume templates."
-                ,R.drawable.ieee_resume,"http://www.ieee.org/membership_services/membership/resumelab.html",
-                R.color.resume_lab_color));
 
         IeeeResourcesAdapter adapter = new IeeeResourcesAdapter(getContext(), mArrayList, this);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));

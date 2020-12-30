@@ -135,7 +135,7 @@ public class InformationFragment extends Fragment implements OnRecyclerViewItemC
                 mCollectionReference = FirebaseFirestore.getInstance().collection(ContentUtils.FIRESTORE_ACHIEVEMENTS);
                 break;
             case ContentUtils.PROJECTS:
-                appbarImageView.setImageResource(R.drawable.mentorship);
+                appbarImageView.setImageResource(R.drawable.projectback2);
                 mCollectionReference = FirebaseFirestore.getInstance().collection(ContentUtils.FIRESTORE_PROJECTS);
                 break;
             case ContentUtils.DIARIES:
