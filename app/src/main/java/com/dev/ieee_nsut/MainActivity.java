@@ -222,8 +222,14 @@ public class MainActivity extends AppCompatActivity
         {
             String appLink = "https://play.google.com/store/apps/details?id=" +
                     getApplicationContext().getPackageName();
-            String shareAppMsg = "Download IEEE-NSUT Android Application and keep yourself updated " +
-                    "with upcoming events and achievements of IEEE NSUT and much more.\n\n" + appLink;
+            String shareAppMsg = "Download IEEE NSUT android application" +
+                    "\n\n" +
+                    "What the app has to offer?\n" +
+                    "-Success journeys of our seniors\n" +
+                    "-All projects made under society\n" +
+                    "-Upcoming events, for which you can register with a single tap.\n" +
+                    "-Society achievements, resources, and a lot more.\n" +
+                    "-Complete interview processes of various companies\n\n" + appLink;
             Intent intent = new Intent(Intent.ACTION_SEND);
             intent.setType("text/plain");
             intent.putExtra(Intent.EXTRA_TEXT, shareAppMsg);
