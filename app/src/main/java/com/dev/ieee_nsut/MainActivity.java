@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity
             mNavigationView.setCheckedItem(R.id.nav_home);
         }
 
-//        btnToggleDark = findViewById(R.id.btnToggleDark);
+//        Button btnToggleDark = findViewById(R.id.btnToggleDark);
 //
 //        // Saving state of our app
 //        // using SharedPreferences
