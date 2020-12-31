@@ -7,7 +7,6 @@
     android:fillViewport="true"
     android:paddingLeft="@dimen/text_horizontal_margin"
     android:paddingRight="@dimen/text_horizontal_margin"
-    android:background="@drawable/bgdgground"
     tools:context=".fragments.WomenFragment">
     <!--android:background="@drawable/digitalBackground"-->
     <LinearLayout
@@ -19,6 +18,7 @@
             android:id="@+id/imageView2"
             android:layout_width="match_parent"
             android:layout_height="181dp"
+            android:layout_marginTop="8dp"
             android:src="@drawable/wie_logo" />
 
         <TextView
