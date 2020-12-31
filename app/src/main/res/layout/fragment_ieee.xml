@@ -1,4 +1,5 @@
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,7 +9,7 @@
     android:paddingLeft="@dimen/text_horizontal_margin"
     android:paddingRight="@dimen/text_horizontal_margin"
     android:paddingBottom="4dp"
-    android:background="@color/white"
+    android:background="@drawable/bgdgground"
     >
 
     <LinearLayout
@@ -17,7 +18,7 @@
         android:orientation="vertical">
 
         <ImageView
-            android:src="@drawable/_8857_22"
+            android:src="@drawable/ieeelogooo"
             android:id="@+id/im_ieee"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

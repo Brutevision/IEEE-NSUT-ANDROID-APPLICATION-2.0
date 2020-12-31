@@ -7,7 +7,7 @@
     android:fillViewport="true"
     android:paddingLeft="@dimen/text_horizontal_margin"
     android:paddingRight="@dimen/text_horizontal_margin"
-    android:background="@color/white"
+    android:background="@drawable/bgdgground"
     tools:context=".fragments.WomenFragment">
     <!--android:background="@drawable/digitalBackground"-->
     <LinearLayout

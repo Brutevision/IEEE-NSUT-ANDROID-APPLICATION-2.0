@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/info_details_root_layout"
+    android:background="@drawable/bgdgground"
     tools:context="com.dev.ieee_nsut.fragments.InformationDetailsFragment">
 
     <com.google.android.material.appbar.AppBarLayout

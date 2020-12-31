@@ -25,16 +25,6 @@
         android:background="@color/white"
         app:headerLayout="@layout/nav_header_main"
         app:menu="@menu/activity_main_drawer"
-        >
-
-<!--        <Button-->
-<!--            android:id="@+id/btnToggleDark"-->
-<!--            android:layout_width="89dp"-->
-<!--            android:layout_height="51dp"-->
-<!--            android:layout_marginTop="20dp"-->
-<!--            android:background="@color/transparentWhite"-->
-<!--            android:icon="@drawable/target"-->
-<!--            app:itemIconTint="@color/white" />-->
-    </com.google.android.material.navigation.NavigationView>
+        />
 
 </androidx.drawerlayout.widget.DrawerLayout>
