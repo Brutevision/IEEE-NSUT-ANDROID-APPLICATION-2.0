@@ -60,7 +60,7 @@ public class ContentUtils {
     public static final String INSTAGRAM_URL = "https://www.instagram.com/ieee_nsut/";
     public static final String TWITTER_URL = "https://twitter.com/ieeensut?lang=en";
     public static final String JOIN_IEEE_URL = "https://docs.google.com/forms/d/e/1FAIpQLSe92LHpgIFl9dvsDGR1H_Rwl9dQyvGbtjfBr67IcmkAbf-Rrw/viewform";
-
+    public static final String PRIVACY_POLICY_URL = "https://sites.google.com/view/ieeensutapplication/home?authuser=3";
 
 
     public static ArrayList<String> getInterestArrayList(String interest) {

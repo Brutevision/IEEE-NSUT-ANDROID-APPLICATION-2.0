@@ -11,6 +11,7 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.dev.ieee_nsut.adapter.SocialRecyclerAdapter;
@@ -55,6 +56,14 @@ public class AboutAppActivity extends AppCompatActivity {
                 } else {
                     toolbarLayout.setTitle("");
                 }
+            }
+        });
+
+        TextView privacyTextView = findViewById(R.id.privacy_text_view);
+        privacyTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                handleUrl(ContentUtils.PRIVACY_POLICY_URL);
             }
         });
 
