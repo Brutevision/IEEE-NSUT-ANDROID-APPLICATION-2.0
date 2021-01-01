@@ -7,7 +7,6 @@
     android:paddingLeft="@dimen/text_horizontal_margin"
     android:paddingRight="@dimen/text_horizontal_margin"
     android:fillViewport="true"
-    android:background="@drawable/bgdgground"
     tools:context=".fragments.CompSocietyFragment">
 
     <LinearLayout

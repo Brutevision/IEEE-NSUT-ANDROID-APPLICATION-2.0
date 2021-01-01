@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="280dp"
-    android:background="@drawable/bgdgground"
     tools:context="com.dev.ieee_nsut.fragments.NoFeedFragment">
 
     <ImageView

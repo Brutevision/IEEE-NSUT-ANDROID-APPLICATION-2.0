@@ -6,7 +6,6 @@
     android:orientation="vertical"
     tools:context="com.dev.ieee_nsut.fragments.InformationFragment"
     android:fitsSystemWindows="true"
-    android:background="@drawable/bgdgground"
     android:id="@+id/info_root_layout">
 
     <com.google.android.material.appbar.AppBarLayout
