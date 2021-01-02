@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:background="@drawable/splashedlowwhite"
+    android:background="@drawable/bcground"
     app:layoutDescription="@xml/activity_splashscreen_scene"
     tools:context=".custom.splashscreen">
 
