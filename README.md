@@ -22,5 +22,5 @@ The IEEE NSUT App gives you access to all the information you may need about IEE
 <img src = "https://github.com/adiityax/IEEE-NSUT-ANDROID-APPLICATION-2.0/blob/master/app/src/main/res/drawable/About%20IEEE.jpeg" height="250" width="140" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src = "https://github.com/adiityax/IEEE-NSUT-ANDROID-APPLICATION-2.0/blob/master/app/src/main/res/drawable/Events.jpeg" height="250" width="140" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src = "https://github.com/adiityax/IEEE-NSUT-ANDROID-APPLICATION-2.0/blob/master/app/src/main/res/drawable/Contact.jpeg" height="250" width="140" />
 
 Download the app now and step out of the tiring and annoying process of accessing the browser for further updates!
-[Insert Link Here](www.google.com)
+[IEEE NSUT](https://play.google.com/store/apps/details?id=com.dev.ieee_nsut)
 
