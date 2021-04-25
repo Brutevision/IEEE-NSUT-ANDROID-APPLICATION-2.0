@@ -1,9 +1,5 @@
 package com.dev.ieee_nsut.models;
 
-/**
- *
- */
-
 public class Developers {
     private float id;
     private String name;

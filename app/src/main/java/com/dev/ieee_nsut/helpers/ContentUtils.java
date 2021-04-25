@@ -14,11 +14,6 @@ import java.util.HashMap;
 
 import me.relex.circleindicator.CircleIndicator;
 
-
-/**
- *
- */
-
 public class ContentUtils {
 
     public static final String EVENTS = "Events";
@@ -63,48 +58,11 @@ public class ContentUtils {
     public static final String PRIVACY_POLICY_URL = "https://sites.google.com/view/ieeensutapplication/home?authuser=3";
 
 
-    public static ArrayList<String> getInterestArrayList(String interest) {
-        ArrayList<String> interestArrayList = new ArrayList<>();
-        if (interest != null) {
-            String interestArray[] = interest.split(";");
-            Collections.addAll(interestArrayList, interestArray);
-            interestArrayList.remove(0);
-        }
-
-        return interestArrayList;
-    }
-
     public static int convertDpToPixel(float dp, Context context) {
         Resources resources = context.getResources();
         DisplayMetrics metrics = resources.getDisplayMetrics();
         float px = dp * ((float) metrics.densityDpi / DisplayMetrics.DENSITY_DEFAULT);
         return (int) px;
-    }
-
-    public static HashMap<String, Boolean> getMapFromArrayList(ArrayList<String> interestArrayList) {
-        HashMap<String, Boolean> interestMap = new HashMap<>();
-        for (String interest : interestArrayList) {
-            interestMap.put(interest, true);
-        }
-        return interestMap;
-    }
-
-    public static ArrayList<String> getArrayListFromMap(HashMap<String, Boolean> interestMap) {
-        ArrayList<String> interestArrayList = new ArrayList<>();
-        interestArrayList.addAll(interestMap.keySet());
-        return interestArrayList;
-    }
-
-
-    /**
-     * @param context
-     */
-
-    public static void deleteUserDataFromSharedPref(Context context){
-        SharedPreferences.Editor editor = context.getSharedPreferences(com.dev.ieee_nsut.helpers.ContentUtils.SHARED_PREF,
-                Context.MODE_PRIVATE).edit();
-        editor.clear();
-        editor.apply();
     }
 
     public static String formatString(String description){

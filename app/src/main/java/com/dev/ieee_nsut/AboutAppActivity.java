@@ -35,18 +35,19 @@ public class AboutAppActivity extends AppCompatActivity {
         final CollapsingToolbarLayout toolbarLayout = findViewById(R.id.toolbar_layout);
         AppBarLayout appBarLayout = findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
-        setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
             actionBar.setHomeButtonEnabled(true);
         }
+
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 onBackPressed();
             }
         });
+
         appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
             @Override
             public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
